@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Cubo en movimiento con texto</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: linear-gradient(to bottom right, #46b6e2, #1995cf);
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .scene {
+      width: 200px;
+      height: 200px;
+      position: relative;
+      transform-style: preserve-3d;
+      animation: rotateCube 10s infinite linear;
+    }
+
+    @keyframes rotateCube {
+      0%   { transform: rotateX(0deg) rotateY(0deg); }
+      100% { transform: rotateX(360deg) rotateY(360deg); }
+    }
+
+    .face {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      background: rgba(0, 0, 0, 0.8);
+      border: 2px solid #0077b6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      font-weight: bold;
+      color: #0077b6;
+      text-shadow: 1px 1px 2px #1c66d4;
+    }
+
+    .front  { transform: rotateY(0deg) translateZ(100px); }
+    .back   { transform: rotateY(180deg) translateZ(100px); }
+    .right  { transform: rotateY(90deg) translateZ(100px); }
+    .left   { transform: rotateY(-90deg) translateZ(100px); }
+    .top    { transform: rotateX(90deg) translateZ(100px); }
+    .bottom { transform: rotateX(-90deg) translateZ(100px); }
+
+    footer {
+      background-color: #0069c0;
+      color: rgb(30, 135, 233);
+      text-align: center;
+      padding: 20px;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+    }
+
+    footer a {
+      display: inline-block;
+      background-color: #36a9d6;
+      color: #0069c0;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 10px;
+      transition: background-color 0.3s;
+    }
+
+    footer a:hover {
+      background-color: #1a8ff0;
+    }
+  </style>
+</head>
+<body>
+  <div class="scene">
+    <div class="face front">AGUA</div>
+    <div class="face back">VIDA</div>
+    <div class="face right">SALUD</div>
+    <div class="face left">BIENESTAR</div>
+    <div class="face top">PUREZA</div>
+    <div class="face bottom">CUIDADO</div>
+  </div>
+
+  <footer>
+    <p>© 2025Camila Buenaventura EMAPA</p>
+    <a href="/index.html">REGRESAR</a>
+  </footer>
+</body>
+</html>

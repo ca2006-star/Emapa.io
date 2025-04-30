@@ -1,0 +1,11 @@
+@font-face {
+    font-family: "formetic";
+    src: url("formetic-9520768.zip")
+    format('truetype');
+}
+#fuente1 {
+    font-family: "formetic";
+    font-size: 40px;
+    color: rgba(141, 85, 0, 0.87);
+    text-align: center;
+}

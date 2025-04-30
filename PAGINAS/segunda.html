@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servicios - Empresa de Agua</title>
+  <link rel="icon" type="image/png" href="/PAGINAS/logo.png">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f8ff;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .intro-section {
+      background: linear-gradient(135deg, #0077cc, #00b4d8);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+      animation: fadeInDown 1s ease-out;
+    }
+
+    .intro-section h2 {
+      font-size: 2.8em;
+      animation: pulse 2s infinite;
+    }
+
+    .services-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      padding: 50px 30px;
+    }
+
+    .service-card {
+      background: white;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      transform: translateY(0); /* Siempre visible */
+      opacity: 1; /* Siempre visible */
+      animation: fadeUp 0.8s ease forwards;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .service-card h3 {
+      color: #0077cc;
+      margin-bottom: 15px;
+    }
+
+    footer {
+      background: #e0e0e0;
+      text-align: center;
+      padding: 25px;
+      font-size: 0.95em;
+    }
+
+    /* Animations */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.05);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="intro-section">
+    <h2>Nuestros Servicios</h2>
+  </div>
+
+  <section class="services-section">
+    <div class="service-card">
+      <h3>Distribución de Agua Potable</h3>
+      <p>Proveemos agua potable de alta calidad a hogares, empresas y comunidades, asegurando disponibilidad constante y servicio eficiente.</p>
+    </div>
+
+    <div class="service-card">
+      <h3>Tratamiento y Purificación</h3>
+      <p>Usamos tecnología avanzada para purificar el agua y garantizar que cumpla con los más altos estándares de calidad.</p>
+    </div>
+
+    <div class="service-card">
+      <h3>Servicios para Empresas</h3>
+      <p>Ofrecemos soluciones personalizadas para empresas que requieren grandes volúmenes de agua y sistemas eficientes.</p>
+    </div>
+
+    <div class="service-card">
+      <h3>Sostenibilidad y Conservación</h3>
+      <p>Implementamos prácticas sostenibles como la reutilización del agua y protección de fuentes hídricas.</p>
+    </div>
+
+    <div class="service-card">
+      <h3>Consultoría y Proyectos</h3>
+      <p>Brindamos asesoría técnica para proyectos de abastecimiento, purificación y almacenamiento de agua.</p>
+    </div>
+
+    <div class="service-card">
+      <h3>Mantenimiento y Reparación</h3>
+      <p>Ofrecemos mantenimiento preventivo y correctivo de instalaciones hidráulicas para garantizar eficiencia a largo plazo.</p>
+    </div>
+  </section>
+  <footer style="background-color: #0069c0; color: white; text-align: center; padding: 20px;">
+    <p>© 2025Camila Buenaventura EMAPA</p>
+    <a href="/index.html" style="display: inline-block; background-color: #ffffff; color: #0069c0; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: bold; transition: background 0.3s;">
+        REGRESAR
+    </a>
+</footer>
+</body>
+</html>

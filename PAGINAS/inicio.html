@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Transformaciones Dinámicas</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #a2d4f7, #d0f0ff);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .contenedor {
+            display: flex;
+            gap: 30px;
+            perspective: 1000px;
+            perspective-origin: 50% 50%;
+            flex: 1;
+            justify-content: center; /* Centra los cuadros horizontalmente */
+            align-items: center; /* Centra los cuadros verticalmente */
+            padding: 20px 0; /* Añade espacio alrededor de los cuadros */
+        }
+
+        .cuadro {
+            background: #ffffffcc;
+            padding: 20px 30px;
+            border-radius: 15px;
+            width: 250px;
+            height: 250px; /* Fijar la altura de los cuadros */
+            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+            transform: rotate3d(0, 1, 0, 25deg);
+            transition: transform 0.6s ease, background 0.4s ease;
+            border: 2px solid #0096c7;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Para mantener el espacio entre los elementos */
+        }
+
+        .cuadro:hover {
+            transform: rotate3d(1, 1, 0, 10deg) scale(1.05);
+            background: #e0f7ff;
+        }
+
+        h2 {
+            font-size: 1.2em;
+            color: #0077b6;
+            text-shadow: 1px 1px 2px #6be1ff;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 0.95em;
+            color: #023e8a;
+            text-align: justify;
+            line-height: 1.4;
+            overflow: hidden; /* Evita que el texto desborde fuera del cuadro */
+        }
+
+        footer {
+            background-color: #0069c0;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+            position: relative;
+            bottom: 0;
+            margin-top: auto;
+        }
+
+        footer a {
+            display: inline-block;
+            background-color: #ffffff;
+            color: #0069c0;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        footer a:hover {
+            background: #90e0ef;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="cuadro">
+            <h2>¿Quiénes somos?</h2>
+            <p>EMAPA es una Empresa Pública Estratégica de carácter social, que tiene como propósito contribuir a la seguridad alimentaria con soberanía, a través del apoyo a la producción nacional y la estabilización de precios en el mercado de alimentos, logrando la satisfacción de nuestros clientes mediante el cumplimiento de estándares, asegurando la inocuidad de nuestros productos y la mejora continua del Sistema de Gestión de la Calidad, con una gestión eficiente y transparente de recursos.</p>
+        </div>
+        <div class="cuadro">
+            <h2>Nuestra Misión</h2>
+            <p>Somos una Empresa Pública Estratégica de carácter social, que coadyuva a garantizar la seguridad alimentaria con soberanía, mediante el apoyo a la producción y estabilización de precios del mercado de alimentos, contribuyendo al Vivir Bien de las bolivianas y bolivianos en el Estado Plurinacional de Bolivia.</p>
+        </div>
+        <div class="cuadro">
+            <h2>Nuestra Visión</h2>
+            <p>Ser la Empresa Estatal consolidada como referente en seguridad alimentaria en la región, generando valor agregado mediante la incorporación de tecnología e innovación en la producción de alimentos.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 Empresa Pública de Agua Potable y Saneamiento</p>
+        <a href="/index.html">REGRESAR</a>
+    </footer>
+</body>
+</html>
